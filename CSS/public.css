@@ -1,0 +1,26 @@
+/* 元素选择器 */
+p{
+    color:green;
+    font-size: 30px;
+}
+
+/* 全局选择器 */
+
+*{
+    margin: auto;
+    border: 0ch;
+}
+
+/* 类选择器，只给指定class的标签添加样式 */
+.content{
+    color: blue;
+    font-size: 50px;
+}
+
+/* id选择器,只能使用一次 */
+#id_style{
+    color: rgb(125, 66, 44);
+    font-size: 40px;
+    font-weight: 500;   /* 字体粗细 */
+    font-style: italic;
+}

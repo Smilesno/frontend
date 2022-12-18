@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="./public.css">
+    <style>
+    h1{
+        color:blue;
+        font-size:30px
+    }
+
+    .box1{
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+    }
+    .box2{
+        width: 500px;
+        height: 500px;
+        background-image: url("../irene.jpg");
+        background-size: cover;
+    }
+    h3{
+        text-align: left;
+        text-decoration: underline;
+        text-indent: 20px;
+    }
+
+    table,td{
+        border: 3px solid red;
+    }
+    table{
+        border-collapse: collapse;
+        width: 500px;
+        height: 300px;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- 语法： CSS规则由两个主要部分构成：选择器，以及一条或多条声明 -->
+    <h1>测试</h1>
+
+    <!-- 引入方式
+    1.内联样式 -->
+    <p style="color:red;">这是一个内联样式</p>
+    <!-- 2.内部样式，在head标签中加入style标签，为选择器的所有元素都创建该样式 -->
+    <!-- 3.外部样式（推荐）通过引入CSS文件，实现整个站点样式的改变（一个项目不可能只有一个html文件） -->
+    <p>这是外部样式</p>
+    
+    <a href="../Welcome.html" class="content">welcome</a>
+    <p id="id_style">id选择器</p>
+
+    <!-- 背景属性 -->
+    <!-- <div class="box1"></div> -->
+    <div class="box2"></div>
+
+    <!-- 文本对齐方式 -->
+    <h3>我是一个标签</h3>
+
+    <!-- 表格样式 -->
+    <table>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+
+
+    
+
+
+</body>
+</html>

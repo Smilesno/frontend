@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">一级标签，居中</h1>
+    <!-- 段落标签 p-->
+    <p>我是一个段落</p>
+    <!-- 段落内换行 <br> -->
+    <p>段落内<br>换行</p>
+    <!-- 水平线标签 hr -->
+    <hr color="yellow" width="300px" size="20px" align="left">
+    <!-- 图片 img -->
+    <img src="irene.jpg" alt="图片损坏" width="500px" title="irene">
+    <!-- 超文本链接 a -->
+    <br>
+    <a href="http://c.biancheng.net/view/2380.html">python __call__</a>
+
+    文本标签
+    <em>定义着重文字</em>      
+    <b>定义粗体文字</b>      
+    <i>定义斜体字</i>      
+    <strong>定义加重语气</strong>      
+    <del>定义删除字</del>      
+    <span>元素没有特定的含义</span>      
+
+    <!-- 有序列表 -->
+    <ol type="a">
+        <li>python</li>
+        <li>JAVA</li>
+        <li>GO</li>
+        <li>C++</li>
+    </ol>
+
+    <!-- 无序列表,快捷键  ul>li -->
+    <ul type="square">
+        <li>string</li>
+        <li>tuple</li>
+        <li>list</li>
+        <li>dict</li>
+    </ul>
+
+    <!-- 表格 -->
+    <table border="5">
+        <tr>
+            <td>课程</td>
+            <td>时间</td>
+        </tr>
+        <tr>
+            <td>python</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>JAVA</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>C++</td>
+            <td>23</td>
+        </tr>
+    </table>
+
+    <!-- 表格单元格合并 -->
+    <table>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td colspan="2">单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td rowspan="2">单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+
+    <!-- form表单 -->
+    <form action="url" method="get" name="">
+        用户名<input type="text">
+        密码<input type="password">
+        <input type="submit">
+    </form>
+
+    <!-- 块元素，内联元素 -->
+    <table>
+        <tr>
+            <td><b>块内元素</b></td>
+            <td><b>内联元素</b></td>
+            
+        </tr>
+        <tr>
+            <td>块元素会在页面中独占一行</td>
+            <td>内联不会独占一行，只占自身大小</td>
+            
+        </tr>
+        <tr>
+            <td>可以设置width,height</td>
+            <td>设置width,height无效</td>
+        </tr>
+        <tr>
+            <td>块元素可以包含行内元素和其他块级元素</td>
+            <td>内联元素包含内联元素不包含块元素</td>
+        </tr>
+    </table>
+
+    <p><b>常见块级元素</b></p>
+    <p>div、form、h1~h6、hr、p、table、ul</p>
+
+    <p><b>常见内联元素</b></p>
+    <p>a、b、em、i、span、strong</p>
+    
+    <p><b>常见行内元素（能够识别宽高）</b></p>
+    <p>button、img、input</p>
+
+    <!-- html5新增标签 -->
+
+    <div id="header">头部</div>
+    <div id="nav">导航</div>
+    <div id="article">独立的、完整的内容块</div>
+    <div id="section">定义文档中的节，章节、页眉、页脚</div>
+    <div id="silder">侧边栏</div>
+    <div id="footer">脚部</div>
+
+    <header></header>
+    <nav></nav>
+    <section></section>
+    <aside></aside>
+    <footer></footer>
+    <article></article>
+
+</body>
+</html>

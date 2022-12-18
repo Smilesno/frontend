@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="./myjs.js"></script>
+    <script>
+
+        // if ... else
+        var num = 15;
+        if (num > 20){
+            console.log("yes")
+        }
+        else if(num <20 && num >10){
+            console.log("mid")
+        }
+        else{
+            console.log("no")
+        }
+
+        // switch case
+        var name = "ccx";
+        switch(name){
+            case "ccx":
+                console.log("ccx");
+                break;
+            case "chano":
+                console.log("chano");
+                break;
+            case "xs":
+                console.log("xs"); 
+                break;
+            default:
+                console.log("exit");
+        }
+
+        // 三元运算符
+        var a = 10;
+        var result = a % 2 == 0 ? "偶数" : "奇数";
+        console.log(result);
+
+        // 循环语句
+        for(var i = 0; i < 10; i++){
+            console.log(i)
+        }
+
+        var j = 10;
+        while(j > 0){
+            document.write(j);
+            document.write("<br>");
+            j--;
+        }
+
+        // 字符串
+        var str1 = "chano";
+        document.write(str1.length);
+        document.write("<br>");
+        document.write(str1.charAt(3));
+
+        var st1 = "string1";
+        var st2 = "string2";
+        var res = st1.concat(st2);
+        document.write("<br>");
+        document.write(res);
+        document.write("<br>");
+        document.write(st1 + "chano");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        .box1{
+            background-color: aqua;
+        }
+        .box2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 浮动以后使元素脱离了文档流
+    浮动只有左右浮动，没有上下浮动 -->
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <!-- 清除浮动
+    1.父元素设置高度
+    2.受影响的元素增加clear属性  clear:both
+    3.overflow清除浮动          父级标签增加 overflow: hidden; clear:both;
+    4.伪对象方式         .container{content: ""; display: block; clear: both;} --> 
+</body>
+</html>
