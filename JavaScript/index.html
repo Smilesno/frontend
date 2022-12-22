@@ -69,6 +69,134 @@
         document.write("<br>");
         document.write(st1 + "chano");
 
+        var total_str = "ccx,xs,my";
+        var sub_str1 = total_str.substring(3, 5);
+        document.write("<br>");
+        document.write(sub_str1);
+
+        var sub_str2 = total_str.substr(0, 3);
+        document.write("<br>");
+        document.write(sub_str2);
+
+        document.write("<br>");
+        document.write(total_str.indexOf('x'));
+        document.write("<br>");
+        document.write(total_str.indexOf('c', 3));
+
+        var str3 = "   hdfsdk    ";
+        document.write("<br>");
+        document.write(str3.trim());
+
+        document.write("<br>");
+        var str_list = total_str.split(',');
+        document.write(str_list);
+
+        // 数组
+        var arr = ["xs", "ccx", "zky"];
+        arr[0] = ["xl"];
+        document.write("<br>");
+        document.write(arr);
+
+        for(var i in arr){
+            document.write("<br>");
+            document.write(arr[i]);
+        }
+
+        document.write("<br>");
+        document.write(Array.isArray(arr));
+
+        var new_array = [];
+        new_array.push("1adf");
+        new_array.push("2aa");
+        new_array.push("3bb");
+
+        document.write("<br>");
+        document.write(new_array);
+
+        new_array.pop();
+        document.write("<br>");
+        document.write(new_array);
+
+        arr.shift();
+        document.write("<br>");
+        document.write(arr);
+
+        arr.unshift("xs")
+        document.write("<br>");
+        document.write(arr);
+
+        var merge_arr = arr.join("");
+        document.write("<br>");
+        document.write(merge_arr);
+
+        var n_arr1 = [1, 2, 3];
+        var n_arr2 = [4, 5, 6];
+        var concat_arr = n_arr1.concat(n_arr2);
+        document.write("<br>");
+        document.write(concat_arr);
+
+        var reverse_arr = n_arr1.reverse();
+        document.write("<br>");
+        document.write(reverse_arr);
+
+        document.write("<br>");
+        document.write(n_arr1.indexOf(2));
+
+        // 函数
+        function print(s){
+            alert(s);
+        }
+
+        print("hello, javascript!");
+
+        // 对象
+        var user = {
+            user_name: "my",
+            password: "123456",
+            age: 18,
+            jobs: ["engineer", "algorithm"],
+            display: print("handsome")
+        }
+
+        document.write("<br>");
+        document.write(user.user_name);
+        document.write(user.age);
+        document.write(user.jobs);
+
+
+        // MATH对象
+        var num = -100;
+        document.write("<br>");
+        document.write(Math.abs(num));
+        
+        var flor = 3.14;
+        document.write("<br>");
+        document.write(Math.floor(flor));
+        document.write("<br>");
+        document.write(Math.ceil(flor));
+
+        // Date对象
+        document.write("<br>");
+        document.write(Date.now());
+
+        document.write("<br>");
+        document.write(new Date());
+
+        document.write("<br>");
+        document.write(new Date(1671641293463));  //时间戳，毫秒数
+        document.write("<br>");
+        document.write(new Date(1671641293463).getDate()); // 星期
+        document.write("<br>");
+        document.write(new Date(1671641293463).getDay());
+        document.write("<br>");
+        document.write(new Date(1671641293463).getMonth()+1);
+
+        
+
+
+
+
+
     </script>
 </body>
 </html>
