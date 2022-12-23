@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myweb</title>
+</head>
+<body>
+    <b>
+        dom操作节点的类型（七种）
+        <br>
+        Document:整个文档树的顶层节点
+        <br>
+        DocumentType: doctype标签
+        <br>
+        Element: 网页的各种html标签
+        <br>
+        Attribute: 网页元素的属性
+        <br>
+        Text: 标签之间或标签包含的文本
+        <br>
+        Comment: 注释
+        <br>
+        DocumentFragment: 文档的片段
+    </b>
+    
+
+    <p class="text">hello</p>
+
+    <div id="root">哈哈哈</div>
+
+    <div class="nav">nav1</div>
+    
+    <div id="container"></div>
+
+    <div id="root2" class="boxt">test</div>
+
+    <script>
+        // 答应整个html文档
+        console.log(document);
+
+        // 获取标签
+        var bs = document.getElementsByTagName("b");
+        console.log(bs[0]);
+
+        var text = document.getElementsByClassName("text");
+        console.log(text[0]);
+
+        var root = document.getElementById("root");
+        console.log(root);
+        root.innerHTML = "hahaha";
+        console.log(root);
+
+        var nav = document.querySelector(".nav");
+        console.log(nav);
+
+        var navs = document.querySelectorAll(".nav");
+        console.log(navs[0]);
+
+        
+        // 创建元素
+        var text = document.createElement('p');
+        var content = document.createTextNode('文本信息');
+        var attri = document.createAttribute('id');
+        text.appendChild(content);
+        text.setAttributeNode(attri);
+        var container = document.getElementById("container");
+        container.appendChild(text);
+        console.log(text);
+
+        //Element对象_属性
+        var root2 = document.getElementById("root2");
+        // root2.id = "root3";
+        root2.className = "box box1";
+        console.log(root2.classList.add("box2"));
+        console.log(root2);
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
