@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件操作</title>
+</head>
+<body>
+    <button onclick="clickHandler()">按钮</button>
+    <button id="btn">按钮2</button>
+    <button id="btn2">按钮3</button>
+    <script>
+        function clickHandler(){
+            console.log("点击了按钮");
+        }
+        
+        // var btn = document.getElementById("btn");
+        // btn.onclick = function(){
+        //     console.log("点击了");
+        // }
+
+        var btn2 = document.getElementById("btn2");
+        btn.addEventListener("click", function(){
+            console.log("点击了2");
+        })
+
+    </script>
+</body>
+</html>

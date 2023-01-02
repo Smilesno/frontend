@@ -36,6 +36,8 @@
 
     <div id="root2" class="boxt">test</div>
 
+    <div class="box" id="box1"></div>
+
     <script>
         // 答应整个html文档
         console.log(document);
@@ -73,15 +75,29 @@
         var root2 = document.getElementById("root2");
         // root2.id = "root3";
         root2.className = "box box1";
-        console.log(root2.classList.add("box2"));
+        root2.classList.add("box2");
         console.log(root2);
+        root2.classList.remove("box1");
+        if(root2.classList.contains('box1')){
+            console.log("有");
+        }
+        else{
+            console.log("没有");
+        }
+        
+        // innerHTML 和 innerText 的区别：
+        // innerHTML可以识别标签，innerText不行
         
 
+        // 操作css
+
+        var box = document.getElementById("box1");
+        box.setAttribute("style", "width:200px;height:200px;background-color:red;")
 
 
+        box.style.backgroundColor = "green";
 
-
-
+        box.style.cssText = "width:200px;height:200px;background-color:yellow;"
 
     </script>
 </body>
