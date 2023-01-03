@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <h3>哈哈</h3>
+    <script>
+        // 滚动事件,执行频率很高
+        function throttle(fn, delay){
+            var valid = true;
+            return function(){
+                if(!valid){
+                    return false
+                }
+                valid = false;
+                setTimeout(function(){
+                    fn();
+                    valid = true;
+                }, delay)
+            }
+        }
+
+        // 抖动如果一直按住鼠标滚动，不会触发事件
+        window.onscroll = throttle(ScollHandler, 2000);
+        function ScollHandler(){
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+        }
+
+
+    </script>
+</body>
+</html>
