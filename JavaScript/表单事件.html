@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="username">
+        <input type="text" id="password">
+    </form>
+
+    <form id="myform">
+        <input type="text">
+        <button id="btn">重置</button>
+    </form>
+
+
+    <script>
+        // 输入就触发
+        var username = document.getElementById("username");
+        username.oninput = function(e){
+            console.log(e.target.value);
+        }
+        // 选择时触发
+        username.onselect = function(e){
+            console.log("选中了");
+        }
+
+        // 输入回车或失去焦点才触发
+        var password = document.getElementById("password");
+        password.onchange = function(e){
+            console.log(e.target.value);
+        }
+
+        var btn = document.getElementById("btn");
+        var myform = document.getElementById("myform");
+        btn.onclick = function(){
+            myform.reset();
+        }
+    </script>
+
+</body>
+</html>
