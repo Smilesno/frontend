@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+    <button id="btn">提交</button>
+
+    <script>
+        var btn = document.getElementById("btn")
+        btn.onclick = function(){
+            $.get("https://www.baidu.com/", {a:100, b:200}, function(data){
+            console.log(data);
+        }, 'json') 
+        }
+        // get请求
+        // $.get("https://www.baidu.com/", {a:100, b:200}, function(data){
+        //     console.log(data);
+        // }, 'json')
+
+
+        $.ajax(
+        {
+            url:'http://127.0.0.1:8000/delay',
+            data:{a:100, b:200},
+            type:'GET',
+            // 响应体结果设置
+            dataType:'json',
+            success:function(data){
+                console.log(data);
+            },
+            timeout:2000,
+            error:function(){
+                console.log("error");
+            },
+            headers:{
+                    c:300,
+                    d:400
+            }
+        }
+        )
+
+
+    </script>
+    
+</body>
+</html>
