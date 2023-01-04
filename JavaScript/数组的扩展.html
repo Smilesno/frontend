@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
+
+    <script>
+        var arr = [10, 20, 30]
+        console.log(arr);
+        for(var i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+        console.log(...arr);
+
+        console.log(Math.max.apply(null, arr));
+        console.log(Math.max(...arr));
+        console.log(Math.max(arr)); //报错，max不能求出属组的最大值
+
+        // 合并数组
+        var arr2 = [40, 50, 60];
+        console.log(...arr, ...arr2);
+
+        // 伪数组
+        // 1.arguments
+        function f1(){
+            console.log(arguments);
+        }
+        f1(10, 20, 30);
+
+        // 2.元素集合
+        let title = document.querySelectorAll("h3");
+        console.log(title);
+
+        // 3.伪数组对象
+        var my = {
+            "0": "11",
+            "1": 22,
+            "2": "ds",
+            length: 3
+        }
+        console.log(my);
+
+        // 将伪数组转为数组
+        console.log(Array.from(title));
+        console.log(Array.from(my));
+
+    </script>
+</body>
+</html>

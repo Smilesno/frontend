@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user = {
+            name: "xs",
+            age: 20
+        }
+
+        const {name, age} = user;
+        console.log(name, age);
+
+        // 字符串遍历
+        var str = "hello";
+        for(let i of str){
+            console.log(i);
+        }
+        for (let i=0;i<str.length;i++){
+            console.log(str[i]);
+        }
+
+        // 模板字符串
+        var href = "https://www.baidu.com";
+        var text = "百度";
+        var baidu = `<a href="${href}">${text}</a>`
+        console.log(baidu);
+
+        var test = "hello, i'm my";
+        console.log(test.startsWith("hello"));
+        console.log(test.includes("ccx"));
+        console.log(test.endsWith("my"));
+
+        console.log("x".repeat(3));
+
+        var h = "hello";
+        console.log(h.padStart(10, "ab"))
+        console.log(h.padEnd(10, "ab"))
+
+        var s = "        dafsjk  ";
+        // 去掉空格
+        console.log(s.trim());
+        console.log(s.trimStart());
+        console.log(s.trimEnd());
+
+        var s2 = "hsssl";
+        console.log(s2.at(0));
+        console.log(s2.at(3));
+
+
+
+    </script>
+</body>
+</html>
