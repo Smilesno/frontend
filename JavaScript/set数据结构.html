@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var s = new Set();
+        // var arr = [10, 20, 30];
+        // arr.forEach(x => s.add(x));
+        // console.log(s);
+
+        var s = new Set([50, 60, 70]);
+        s.add(80);
+        s.delete(50);
+        s.clear();
+        console.log(s.has(60));
+        console.log(s);
+        console.log([...new Set([10, 10, 20, 20])]);
+
+
+    </script>
+    
+</body>
+</html>

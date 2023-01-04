@@ -7,6 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        var name = "alice"
+        var user = {
+            name,
+            age: 20,
+            getName(){
+                console.log(this.name);
+            }
+        }
+        console.log(user.name);
+        user.getName();
+
+        // 动态key
+        var ib = "itbanzhan"
+        var user = {
+            [ib]: "web,python,c++",
+            age: 13
+        }
+        console.log(user);
+
+
+    </script>
 </body>
 </html>
