@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <div id="div1">div1...</div>
+    <div id="div2">div2...</div>
+
+    <script>
+        // 获取元素对象
+        var div1 = $("#div1");
+        alert(div1.html());
+
+        // jquery对象和js对象的区别和转换
+        var divs = document.getElementsByTagName('div');
+
+        var divs2 = $("div");
+        console.log(divs);
+        console.log(divs2);
+
+        for(let i=0;i<divs.length;i++){
+            divs[i].innerHTML = "aaa";
+        }
+        divs2.html("bbb");
+        $(divs).html("ccc");
+
+        // js --> jq: $(js对象)
+        // jq -- > js: jq[] 或者 jq.get(索引)
+
+    </script>
+</body>
+</html>
