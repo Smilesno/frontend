@@ -16,15 +16,29 @@
     </style>
 </head>
 <body>
-    <div id="div1"></div>
+    <div id="div1" title="nihao"></div>
     <div id="div2"></div>
+
+    <input type="button" value="含有title属性的div背景为蓝色" id="it">
     <input type="button" value="点我" id="btn">
+    <div id="div1" title="title"></div>
+    <div id="div1" title="xsccx"></div>
+    <div id="div1" title="zky"></div>
     <script>
         $("#btn").click(function(){
             alert("点击了");
         })
 
         $("#div1,#div2").css("background-color", "green");
+
+        // 属性选择器
+        $("div[title='nihao'").css("background-color", "blue");
+        // 以xs开头的属性
+        $("div[title^='xs']").css("background-color", "pink");
+        // 以le结尾的属性
+        $("div[title$='le']").css("background-color", "black");
+        // 包含ky的属性
+        $("div[title*='ky']").css("background-color", "gray");
     </script>
     
 </body>
