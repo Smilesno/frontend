@@ -26,12 +26,59 @@
     <div id="div6">div6...</div>
     <div id="div7">div7...</div>
     <div id="div8">div8...</div>
+
+    <input type="button" value="利用jquery对象的val()方法改变表单内可用<input>元素的值" id="b1">
+    <input type="button" value="利用jquery对象的val()方法改变表单内不可用<input>元素的值" id="b2">
+    <input type="button" value="利用jquery对象的length属性获取复选框选中的个数" id="b3">
+    <input type="button" value="利用jquery对象的length属性获取下拉框选中的个数" id="b4">
+
+    <br>
+    <br>
+    <input type="text" value="不可用值1" disabled="disabled"> 
+    <input type="text" value="可用值1" >
+    <input type="text" value="不可用值2" disabled="disabled">
+    <input type="text" value="可用值2" >
+
+    <br><br>
+
+    <input type="checkbox" name="items" value="美容" >美容
+    <input type="checkbox" name="items" value="IT" >IT
+    <input type="checkbox" name="items" value="金融" >金融
+    <input type="checkbox" name="items" value="管理" >管理
+    
+   <br><br>
+   
+    <select name="job" id="job" multiple="multiple" size=4>
+        <option>程序员</option>
+      <option>中级程序员</option>
+      <option>高级程序员</option>
+      <option>系统分析师</option>
+    </select>
     
     <script>
+        // 过滤选择器
         $("div:not(#div5)").css("background-color", "green");
         $("div:first").css("background-color", "pink");
         $("div:last").css("background-color", "blue");
         $("div:gt(6)").css("background-color", "gray");
+
+
+        // 表单过滤选择器
+        $("#b1").click(function(){
+            $("input[type='text']:enabled").val("aaa");
+        })
+
+        $("#b2").click(function(){
+            $("input[type='text']:disabled").val("bbb");
+        })
+
+        $("#b3").click(function(){
+            alert($("input[type='checkbox']:checked").length);
+        })
+
+        $("#b4").click(function(){
+            alert($("select > option:selected").length);
+        })
     </script>
 </body>
 </html>

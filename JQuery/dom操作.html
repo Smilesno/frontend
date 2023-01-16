@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    1.内容操作
+        1.html(), 获取整体标签
+        2.text()  获取元素纯文本的内容
+        3.val  获取/设置元素的value属性值
+    
+    2.属性操作
+
+        <input type="text" name="username" id="input1" value="zhangsan">
+        <div id="mydiv"><p><a href="#">标题标签</a></p></div>
+
+        <script>
+            alert($("#input1").val());
+            alert($("#mydiv").html());
+            alert($("#mydiv").text());
+        </script>
+</body>
+</html>
