@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../1.vue简介/my_vuejs/vue.js"></script>
+</head>
+<body>
+    <div id="app-3">
+        <span v-if="flag=='A'">
+            陈常欣
+        </span>
+        <span v-else-if="flag">
+            irene
+        </span>
+        <span v-else="flag">
+            张恺仪
+        </span>
+      </div>
+
+      <script>
+        var app2 = new Vue({
+            el: '#app-3',
+            data: {
+                flag: 'A'
+            }
+        })
+      </script>
+    
+</body>
+</html>
