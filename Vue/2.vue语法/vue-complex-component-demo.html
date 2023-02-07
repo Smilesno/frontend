@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../1.vue简介/my_vuejs/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <prop-item
+                v-for="item in lo_list"
+                v-bind:prop="item"
+                v-bind:key="item.id"
+                >
+            </prop-item>>
+        </ul>
+    </div>
+
+    <script>
+    Vue.component('prop-item', {
+        props:['prop'],
+        template: '<li>{{ prop.text }}</li>'
+    })
+
+    var app = new Vue({
+        el:"#app",
+        data:{
+            lo_list : [
+                {id: 0, text: 'xxx'},
+                {id: 1, text: 'yyy'},
+                {id: 2, text: 'zzz'}
+            ]
+        }
+    })
+    </script>
+    
+</body>
+</html>
