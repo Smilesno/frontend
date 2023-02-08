@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <p v-once>{{ message }}</p>
-        <p>{{ url }}</p>
+        <!-- <p>{{ url }}</p> -->
         <p v-html="url"></p>
     </div>
     
@@ -19,7 +19,7 @@
             el: "#app",
             data:{
                 message: "can't change",
-                url: '<a href="https://www.baidu.com"></a>'
+                url: '<a href="https://www.baidu.com">百度一下</a>'
             }
         })
     </script>

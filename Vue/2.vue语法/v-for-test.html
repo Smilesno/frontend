@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../1.vue简介/my_vuejs/vue.js"></script>
+    <style>
+        .fontco{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(name,index) in data_list" @click="changeColor" :class="{fontco: isColored}">{{ name }}</li>
+        </ul>
+    </div>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                data_list : [
+                    "雪碎九巅",
+                    "卧龙",
+                    "凤雏",
+                    "萝卜蹲"
+                ],
+                isColored: false
+            },
+            methods: {
+                changeColor: function(){
+                    this.isColored = true
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

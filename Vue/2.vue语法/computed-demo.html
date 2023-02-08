@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../1.vue简介/my_vuejs/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <p>{{ newData }}</p>
+        <p>{{ preData }}</p>
+        <p>{{ getValue() }}</p>
+    </div>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "我是 data"
+            },
+            computed: {
+                newData:function(){
+                    return "我是computed1"
+                },
+                preData: {
+                    get(){
+                        return "我是computed2"
+                    },
+                    set(vl){
+                        this.message = "我是computed2"
+                    }
+                }
+            },
+            methods: {
+                getValue: function(){
+                    return "我是 methods"
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
