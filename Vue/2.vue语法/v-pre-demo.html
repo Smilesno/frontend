@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../1.vue简介/my_vuejs/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <!-- 直接显示标签中的内容 -->
+        <p v-pre>{{ message }}</p>
+    </div>
+    
+    <script>
+        var data = {
+            message: "hello, vue"
+        }
+        const app = new Vue({  
+            el: "#app",
+            data: {
+                message: "v-pre"
+            } 
+        })
+
+    </script>
+</body>
+</html>

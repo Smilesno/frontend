@@ -12,6 +12,15 @@
         <span v-bind:title="message">
           Hover your mouse over me for a few seconds
           to see my dynamically bound title!
+          <br>
+          <a v-bind:href="href">百度一下</a>
+          <a :href="href">百度一下</a>
+          <br>
+          <p>{{ counter }}</p>
+
+          <button v-on:click="addFunc">+</button>
+          <button v-on:click="subFunc">-</button>
+
         </span>
       </div>
 
@@ -19,7 +28,17 @@
         var app2 = new Vue({
             el: '#app-2',
             data: {
-                message: 'You loaded this page on ' + new Date().toLocaleString()
+                message: 'You loaded this page on ' + new Date().toLocaleString(),
+                href : "https://www.baidu.com",
+                counter: 0
+            },
+            methods:{
+              addFunc: function(){
+                this.counter ++;
+              },
+              subFunc: function(){
+                this.counter --;
+              }
             }
         })
       </script>
