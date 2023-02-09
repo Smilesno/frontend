@@ -11,17 +11,22 @@
     <div id="app-5">
         <p>{{ message }}</p>
         <button v-on:click="reverseMessage">Reverse Message</button>
+        <button v-on:click="getParamAndEvent(abc, $event)">获取浏览器返回的event参数</button>
       </div>
 
       <script>
         var app5 = new Vue({
             el: '#app-5',
             data: {
-                message: 'Hello Vue.js!'
+                message: 'Hello Vue.js!',
+                abc: "ssss"
             },
             methods: {
                 reverseMessage: function () {
                 this.message = this.message.split('').reverse().join('')
+                },
+                getParamAndEvent(abc, event){
+                    console.log(abc, event);
                 }
             }
             })

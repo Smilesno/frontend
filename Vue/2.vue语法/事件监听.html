@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../1.vue简介/my_vuejs/vue.js"></script>
+</head>
+<body>
+    <!-- 1.解决冒泡事件，点击子标签会触发父级标签，javascript使用event.stopPropagation -->
+    <div id="app" @click="divClick"> 
+        xxx
+        <button @click.stop="buttonClick">按钮</button>      
+    
+        <!-- 2.阻止默认事件，使用自定义事件 -->
+    <br>
+    <form action="baidu.com">
+        <input type="text">
+        <input type="submit" value="提交" @click.prevent="submitFunc">
+    </form>
+
+    <!-- 3.监听键盘的键帽 -->
+    <input type="text" @keyup.enter="enterFunc">
+
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+
+            },
+            methods: {
+                divClick: function(){
+                    console.log("divClick")
+                },
+                buttonClick: function(){
+                    console.log("buttonClick")
+                },
+                submitFunc: function(){
+                    console.log("submitFunc")
+                },
+                enterFunc: function(){
+                    console.log("enterFunc")
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
