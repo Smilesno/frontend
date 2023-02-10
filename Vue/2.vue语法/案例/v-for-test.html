@@ -15,7 +15,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="(name,index) in data_list" @click="changeColor" :class="{fontco: isColored}">{{ name }}</li>
+            <li v-for="(name,index) in data_list" @click="changeColor(index)" :class="{fontco: index == curIndex}">{{ name }}</li>
         </ul>
     </div>
     <script>
@@ -28,11 +28,12 @@
                     "凤雏",
                     "萝卜蹲"
                 ],
-                isColored: false
+                isColored: false,
+                curIndex: -1
             },
             methods: {
-                changeColor: function(){
-                    this.isColored = true
+                changeColor: function(index){
+                    this.curIndex = index
                 }
             }
         })
